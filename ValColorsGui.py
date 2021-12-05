@@ -13,7 +13,7 @@ kb = Controller()
 def on_press(key):
     if key == keyboard.Key.shift_r:
         if GetWindowText(GetForegroundWindow()) == 'VALORANT  ':
-            
+
             kb.release(Key.shift_r)
             kb.press(Key.ctrl)
             kb.press('a')
@@ -28,7 +28,7 @@ def on_press(key):
             kb.release(Key.ctrl)
 
             latest = ''
-            colors = ['<enemy>', '<system>', '<notification>', '<team>', '<warning>', '<team>', '<notification>', '<system>']
+            colors = ['&lt;enemy>', '&lt;system>', '&lt;notification>', '&lt;team>', '&lt;warning>', '&lt;team>', '&lt;notification>', '&lt;system>']
             output = ''
 
             mode = 'rainbow'
@@ -40,9 +40,9 @@ def on_press(key):
                     if i != ' ':
                         rand = random.choice(colors)
                         while rand == latest:
-                            rand = random.choice(colors)    
+                            rand = random.choice(colors)
                         latest = rand
-                        output += rand + i + '</>'
+                        output += rand + i + '&lt;/>'
                     else:
                         output += ' '
 
